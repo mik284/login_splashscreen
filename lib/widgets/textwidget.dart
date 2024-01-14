@@ -3,27 +3,27 @@ import 'package:flutter/cupertino.dart';
 class TextWidget extends StatelessWidget {
   final String text;
   final Color color;
-  final String mikey;
-  final double fontsize;
-  final FontWeight fontweight;
-  final TextAlign texty;
+  final String family;
+  final double size;
+  final FontWeight weight;
+  final TextAlign align;
 
   const TextWidget(
       {super.key,
       required this.text,
       required this.color,
-      required this.mikey,
-      required this.fontsize,
-      required this.fontweight,
-      required this.texty});
+      required this.family,
+      required this.size,
+      required this.weight,
+      required this.align});
   @override
   Widget build(BuildContext context) {
     return Text(text,
-        textAlign: texty,
+        textAlign: align,
         style: TextStyle(
             color: color,
-            fontSize: fontsize,
-            fontFamily: mikey,
-            fontWeight: fontweight));
+            fontSize: size,
+            fontFamily: family,
+            fontWeight: weight));
   }
 }
