@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../widgets/buttonwidget.dart';
 import '../widgets/textwidget.dart';
@@ -12,18 +13,22 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: const Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CloseButtonIcon(),
-            TextWidget(
-                text: 'CLOSE',
-                color: Colors.black,
-                align: TextAlign.center,
-                family: "Montserrat",
-                weight: FontWeight.w300,
-                size: 14),
-          ],
+        leading: const CloseButtonIcon(),
+        bottom: const PreferredSize(
+          preferredSize: Size(30, 10),
+          child: Align(
+            child: Padding(
+              padding: EdgeInsets.only(left: 15.0),
+              child: TextWidget(
+                  text: 'CLOSE',
+                  color: Colors.black,
+                  align: TextAlign.center,
+                  family: "Montserrat",
+                  weight: FontWeight.w300,
+                  size: 10),
+            ),
+            alignment: Alignment.centerLeft,
+          ),
         ),
         title: const TextWidget(
             text: 'Sign In',
@@ -128,7 +133,11 @@ class LoginPage extends StatelessWidget {
                           children: [
                             Padding(
                               padding: EdgeInsets.only(right: 8.0),
-                              child: Icon(Icons.facebook, color: Colors.white, size: 30 ,),
+                              child: Icon(
+                                Icons.facebook,
+                                color: Colors.white,
+                                size: 30,
+                              ),
                             ),
                             TextWidget(
                                 text: "log in with Facebook",
@@ -151,9 +160,10 @@ class LoginPage extends StatelessWidget {
         width: double.infinity,
         child: const ButtonWidget(
             color: Colors.teal,
-            width: double.infinity,
+            width: 360,
             height: 70,
-            radius: 20,
+            radius: 40,
+            currentview: "bottom",
             widget: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -166,7 +176,7 @@ class LoginPage extends StatelessWidget {
                     align: TextAlign.center)
               ],
             )),
-      ) ,
+      ),
     );
   }
 }

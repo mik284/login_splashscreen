@@ -7,11 +7,14 @@ class ButtonWidget extends StatelessWidget {
   final double height, radius;
   final Widget widget;
 
+  final currentview;
+
   const ButtonWidget(
       {super.key,
         required this.color,
         required this.width,
         required this.height,
+        this.currentview,
         required this.radius,
         required this.widget});
   @override
@@ -20,7 +23,9 @@ class ButtonWidget extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-          color: color, borderRadius: BorderRadius.circular(radius), border: Border.all(color: Colors.blueAccent)),
+          color: color, borderRadius: currentview.toString()=="bottom"?BorderRadius.only(
+        topLeft: Radius.circular(radius), topRight: Radius.circular(radius)
+      ):BorderRadius.circular(radius), border: Border.all(color: Colors.blueAccent)),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Center(child: widget),
