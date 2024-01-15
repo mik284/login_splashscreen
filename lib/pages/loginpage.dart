@@ -51,12 +51,8 @@ class LoginPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 8.0),
-                    child: Icon(Icons.account_circle_outlined),
-                  ),
                   TextWidget(
-                      text: 'Welcome to Beamo',
+                      text: '👋 Welcome to Beamo',
                       color: Colors.black,
                       align: TextAlign.center,
                       family: "Montserrat",
@@ -66,7 +62,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 48.0),
+              padding: EdgeInsets.only(top: 58.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -150,23 +146,27 @@ class LoginPage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const ButtonWidget(
-          color: Colors.teal,
-          width: 360,
-          height: 60,
-          radius: 50,
-          widget: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextWidget(
-                  text: "Next",
-                  color: Colors.white,
-                  family: "Montserrat",
-                  size: 13,
-                  weight: FontWeight.w400,
-                  align: TextAlign.center)
-            ],
-          )) ,
+      bottomNavigationBar: Container(
+        transform: Matrix4.translationValues(0, 20.0, 0),
+        width: double.infinity,
+        child: const ButtonWidget(
+            color: Colors.teal,
+            width: double.infinity,
+            height: 70,
+            radius: 20,
+            widget: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextWidget(
+                    text: "Next",
+                    color: Colors.white,
+                    family: "Montserrat",
+                    size: 13,
+                    weight: FontWeight.w400,
+                    align: TextAlign.center)
+              ],
+            )),
+      ) ,
     );
   }
 }
