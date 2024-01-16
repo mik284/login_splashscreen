@@ -117,7 +117,7 @@ class LoginUi extends StatelessWidget {
           color: Color(0xff80bac2),
           width: 360,
           height: 50,
-          radius: 40,
+          radius: 35,
           currentview: "bottom",
           widget: TextWidget(
               text: "Next",
