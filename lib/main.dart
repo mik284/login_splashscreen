@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginui/pages/loginpage.dart';
+import 'package:loginui/pages/loginui_revamp.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orangeAccent),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: const LoginUi(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
