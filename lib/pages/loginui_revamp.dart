@@ -36,9 +36,12 @@ class LoginUi extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
-        leading: const CloseButtonIcon(),
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 8.0),
+          child: CloseButtonIcon(),
+        ),
         bottom: const PreferredSize(
-            preferredSize: Size(30, 5),
+            preferredSize: Size(30, 2),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Padding(
@@ -47,7 +50,7 @@ class LoginUi extends StatelessWidget {
                     text: 'CLOSE',
                     color: Colors.black,
                     align: TextAlign.center,
-                    family: "Montserrat",
+                    family: "Poppins",
                     weight: FontWeight.w300,
                     size: 12),
               ),
@@ -56,7 +59,7 @@ class LoginUi extends StatelessWidget {
             text: 'Sign In',
             color: Colors.black,
             align: TextAlign.center,
-            family: "Montserrat",
+            family: "Poppins",
             weight: FontWeight.w500,
             size: 18),
         centerTitle: true,
@@ -67,7 +70,7 @@ class LoginUi extends StatelessWidget {
                 text: 'SKIP FOR NOW',
                 color: Colors.black,
                 align: TextAlign.center,
-                family: "Montserrat",
+                family: "Poppins",
                 weight: FontWeight.w500,
                 size: 10),
           ),
@@ -100,7 +103,7 @@ class LoginUi extends StatelessWidget {
                           TextWidget(
                               text: item['title'],
                               color: index == 3 ? Colors.white : Colors.black,
-                              family: "Montserrat",
+                              family: "Poppins",
                               size: index == 0 ? 18 : 13,
                               weight: FontWeight.w400,
                               align: TextAlign.center),
@@ -119,7 +122,7 @@ class LoginUi extends StatelessWidget {
           widget: TextWidget(
               text: "Next",
               color: Colors.white,
-              family: "Montserrat",
+              family: "Lato",
               size: 13,
               weight: FontWeight.w400,
               align: TextAlign.center)),

@@ -21,10 +21,8 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text,
         textAlign: align,
-        style: TextStyle(
-            color: color,
-            fontSize: size,
-            fontFamily: family,
-            fontWeight: weight));
+        style: GoogleFonts.getFont(family,
+            textStyle:
+                TextStyle(color: color, fontSize: size, fontWeight: weight)));
   }
 }
