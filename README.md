@@ -1,4 +1,5 @@
 # loginui
+![login splash screen ui](https://github.com/mik284/login_splashscreen/assets/65639270/b407de28-0519-4c5e-8095-1ad1da5a54be)
 
 splash screen for login
 
